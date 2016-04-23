@@ -1,0 +1,29 @@
+<h1>Listing reservation_types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Reservation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservation_types.each do |reservation_type| %>
+      <tr>
+        <td><%= reservation_type.title %></td>
+        <td><%= reservation_type.description %></td>
+        <td><%= reservation_type.reservation %></td>
+        <td><%= link_to 'Show', reservation_type %></td>
+        <td><%= link_to 'Edit', edit_reservation_type_path(reservation_type) %></td>
+        <td><%= link_to 'Destroy', reservation_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation type', new_reservation_type_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @reservation_type.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @reservation_type.description %>
+</p>
+
+<p>
+  <strong>Reservation:</strong>
+  <%= @reservation_type.reservation %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_type_path(@reservation_type) %> |
+<%= link_to 'Back', reservation_types_path %>
