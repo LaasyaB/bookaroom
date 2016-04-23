@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rooms
+
   resources :room_types
 
   resources :reservation_types
